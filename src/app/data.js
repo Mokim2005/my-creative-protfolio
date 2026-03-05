@@ -19,73 +19,39 @@ Websites:
 export const projectsData = [
   {
     id: 1,
-    name: "EcoTracker",
-    description: "Track your carbon footprint",
-    date: "2022-08-15",
-    demoLink: "https://ecotracker.example.com",
+    name: "City-Fix",
+    description:
+      "A community-driven web platform with role-based user authentication where admins and users can manage, report, and track city issues efficiently.",
+    date: "2025-08-15",
+    demoLink: "https://city-fix-b6595.web.app",
+    githubLink: "https://github.com/Mokim2005/city-fix",
   },
   {
     id: 2,
-    name: "ArtGallery Online",
-    description: "Digital art showcase platform",
-    date: "2022-06-20",
-    demoLink: "https://artgalleryonline.example.com",
+    name: "Zap-Shift",
+    description:
+      "A modern parcel tracking and delivery management system with role-based dashboards for admins and users to manage shipments and monitor real-time updates.",
+    date: "2025-07-20",
+    demoLink: "https://zap-shift-14bf4.web.app",
+    githubLink: "https://github.com/Mokim2005/zap-shift-client",
   },
   {
     id: 3,
-    name: "BudgetPlanner",
-    description: "Plan and track expenses",
-    date: "2022-09-10",
-    demoLink: "https://budgetplanner.example.com",
+    name: "Clean-City",
+    description:
+      "An environmental awareness platform designed to encourage citizens to participate in keeping their city clean through reporting and community engagement.",
+    date: "2025-09-10",
+    demoLink: "https://clean-city-10.netlify.app",
+    githubLink: "https://github.com/Mokim2005/Community-Cleanliness-Issue-Reporting-Portal-repo",
   },
   {
     id: 4,
-    name: "HealthBeat",
-    description: "Monitor heart rate zones",
-    date: "2022-05-30",
-    demoLink: "https://healthbeat.example.com",
-  },
-  {
-    id: 5,
-    name: "RecipeFinder",
-    description: "Discover new recipes",
-    date: "2022-07-12",
-    demoLink: "https://recipefinder.example.com",
-  },
-  {
-    id: 6,
-    name: "JourneyLogger",
-    description: "Log your travels",
-    date: "2022-10-01",
-    demoLink: "https://journeylogger.example.com",
-  },
-  {
-    id: 7,
-    name: "StudyBuddy",
-    description: "Collaborative learning platform",
-    date: "2022-04-18",
-    demoLink: "https://studybuddy.example.com",
-  },
-  {
-    id: 8,
-    name: "TechTalk",
-    description: "Tech news aggregator",
-    date: "2022-11-05",
-    demoLink: "https://techtalk.example.com",
-  },
-  {
-    id: 9,
-    name: "FitTrack",
-    description: "Fitness and workout tracker",
-    date: "2022-03-22",
-    demoLink: "https://fittrack.example.com",
-  },
-  {
-    id: 10,
-    name: "MindfulMoments",
-    description: "Meditation and mindfulness app",
-    date: "2022-02-14",
-    demoLink: "https://mindfulmoments.example.com",
+    name: "Dragon News",
+    description:
+      "A dynamic news portal that displays updated category-based news with authentication and responsive design for a better reading experience.",
+    date: "2025-07-30",
+    demoLink: "https://dragon-news44.netlify.app/category/1",
+    githubLink: "https://github.com/Mokim2005/dragon-news-firebase",
   },
 ];
 
@@ -119,5 +85,3 @@ export const BtnList = [
     newTab: true,
   },
 ];
-
-

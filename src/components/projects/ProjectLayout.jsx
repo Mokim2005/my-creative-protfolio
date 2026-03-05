@@ -1,29 +1,64 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 const item = {
   hidden: { opacity: 0, y: 100 },
   show: { opacity: 1, y: 0 },
 };
 
-const ProjectLink = motion(Link);
-const ProjectLayout = ({ name, description, date, demoLink }) => {
+const ProjectLayout = ({
+  name,
+  description,
+  date,
+  demoLink,
+  githubLink,
+}) => {
   return (
-    <ProjectLink
-      variants={item}
-      href={demoLink}
-      target={"_blank"}
-      className=" text-sm md:text-base flex  items-center justify-between w-full relative rounded-lg overflow-hidden p-4 md:p-6 custom-bg"
-    >
-      <div className="flex items-center justify-center space-x-2">
-        <h2 className="text-foreground">{name}</h2>
-        <p className="text-muted hidden sm:inline-block">{description}</p>
+    <motion.div variants={item}>
+      <div className="flex flex-col md:flex-row md:items-center justify-between w-full relative rounded-lg overflow-hidden p-4 md:p-6 custom-bg gap-4">
+
+        {/* Left Content */}
+        <div className="flex flex-col">
+          <h2 className="text-foreground text-lg font-semibold">{name}</h2>
+          <p className="text-muted text-sm hidden sm:block">
+            {description}
+          </p>
+        </div>
+
+        {/* Date */}
+        <p className="text-muted text-sm">
+          {new Date(date).toDateString()}
+        </p>
+
+        {/* Links */}
+        <div className="flex items-center gap-4">
+
+          {/* Live Demo */}
+          {demoLink && (
+            <Link
+              href={demoLink}
+              target="_blank"
+              className="text-foreground hover:text-primary transition text-xl"
+            >
+              <FiExternalLink />
+            </Link>
+          )}
+
+          {/* GitHub */}
+          {githubLink && (
+            <Link
+              href={githubLink}
+              target="_blank"
+              className="text-foreground hover:text-primary transition text-xl"
+            >
+              <FiGithub />
+            </Link>
+          )}
+
+        </div>
       </div>
-      <div className="self-end flex-1 mx-2 mb-1 bg-transparent border-b border-dashed border-muted" />
-      <p className="text-muted sm:text-foreground">
-        {new Date(date).toDateString()}
-      </p>
-    </ProjectLink>
+    </motion.div>
   );
 };
 
