@@ -5,96 +5,135 @@ import Link from "next/link";
 const AboutDetails = () => {
   return (
     <section className="py-20 w-full">
-      <div className="grid grid-cols-12 gap-4 xs:gap-6  md:gap-8 w-full">
-        <ItemLayout
-          className={
-            " col-span-full lg:col-span-8 row-span-2 flex-col items-start"
-          }
-        >
-          <h2 className="  text-xl md:text-2xl text-left w-full capitalize">
-            Architect of Enchantment
+      <div className="grid grid-cols-12 gap-4 xs:gap-6 md:gap-8 w-full">
+        {/* About Text */}
+        <ItemLayout className="col-span-full lg:col-span-8 row-span-2 flex-col items-start">
+          <h2 className="text-xl md:text-2xl text-left w-full capitalize">
+            Passionate Full Stack Developer
           </h2>
-          <p className="font-light  text-xs sm:text-sm md:text-base   ">
-            My journey in web development is powered by an array of mystical
-            tools and languages, with JavaScript casting the core of my
-            enchantments. I wield frameworks like React.js and Next.js with
-            precision, crafting seamless portals (websites) that connect realms
-            (users) across the digital universe. The ancient arts of the
-            Jamstack empower me to create fast, secure, and dynamic experiences,
-            while my design skills ensure every creation is not only functional
-            but visually captivating. Join me as I continue to explore new
-            spells and technologies to shape the future of the web.
+
+          <p className="font-light text-xs sm:text-sm md:text-base">
+            I am a Computer Science student passionate about building modern,
+            responsive, and user-friendly web applications using React.js and
+            Next.js. I focus on clean UI, authentication systems, role-based
+            features, and real-world projects. My goal is to continuously
+            improve my skills and grow as a professional developer.
           </p>
         </ItemLayout>
 
-        <ItemLayout
-          className={" col-span-full xs:col-span-6 lg:col-span-4 text-accent"}
-        >
+        {/* Projects */}
+        <ItemLayout className="col-span-full xs:col-span-6 lg:col-span-4 text-accent">
           <p className="font-semibold w-full text-left text-2xl sm:text-5xl">
-            25+ <sub className="font-semibold text-base">clients</sub>
+            10+ <sub className="font-semibold text-base">projects built</sub>
           </p>
         </ItemLayout>
 
-        <ItemLayout
-          className={"col-span-full xs:col-span-6 lg:col-span-4 text-accent"}
-        >
+        {/* Learning */}
+        <ItemLayout className="col-span-full xs:col-span-6 lg:col-span-4 text-accent">
           <p className="font-semibold w-full text-left text-2xl sm:text-5xl">
-            4+{" "}
-            <sub className="font-semibold text-base">years of experience</sub>
+            Always <sub className="font-semibold text-base">learning</sub>
           </p>
         </ItemLayout>
 
-        <ItemLayout
-          className={"col-span-full sm:col-span-6 md:col-span-4 !p-0"}
-        >
-          <img
-            className="w-full h-auto"
-            src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api/top-langs?username=codebucks27&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`}
-            alt="CodeBucks"
-            loading="lazy"
-          />
-        </ItemLayout>
-
-        <ItemLayout className={"col-span-full md:col-span-8 !p-0"}>
-          <img
-            className="w-full h-auto"
-            src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api?username=codebucks27&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`}
-            alt="CodeBucks"
-            loading="lazy"
-          />
-        </ItemLayout>
-
-        <ItemLayout className={"col-span-full"}>
-          <img
-            className="w-full h-auto"
-            src={`https://skillicons.dev/icons?i=appwrite,aws,babel,bootstrap,cloudflare,css,d3,docker,figma,firebase,gatsby,git,github,graphql,html,ipfs,js,jquery,kubernetes,linux,mongodb,mysql,netlify,nextjs,nodejs,npm,postgres,react,redux,replit,sass,supabase,tailwind,threejs,vercel,vite,vscode,yarn`}
-            alt="CodeBucks"
-            loading="lazy"
-          />
-        </ItemLayout>
-
-        <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
-          <img
-            className="w-full h-auto"
-            src={`${process.env.NEXT_PUBLIC_GITHUB_STREAK_STATS_URL}?user=codebucks27&theme=dark&hide_border=true&type=svg&background=EB545400&ring=FEFE5B&currStreakLabel=FEFE5B`}
-            alt="CodeBucks"
-            loading="lazy"
-          />
-        </ItemLayout>
-
-        <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
-          <Link
-            href="https://github.com/codebucks27/Nextjs-contentlayer-blog"
-            target="_blank"
-            className="w-full"
-          >
+        {/* Skills Section */}
+        <ItemLayout className="col-span-full !p-0">
+          <div className="flex flex-wrap justify-center gap-6 p-4">
             <img
-              className="w-full h-auto"
-              src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api/pin/?username=codebucks27&repo=Nextjs-contentlayer-blog&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false&description_lines_count=2`}
-              alt="CodeBucks"
-              loading="lazy"
+              src="https://skillicons.dev/icons?i=js"
+              alt="JavaScript"
+              title="JavaScript"
+              className="w-20 h-20 hover:scale-110 transition-transform duration-300"
             />
-          </Link>
+
+            <img
+              src="https://skillicons.dev/icons?i=react"
+              alt="React"
+              title="React.js"
+              className="w-20 h-20 hover:scale-110 transition-transform duration-300"
+            />
+
+            <img
+              src="https://skillicons.dev/icons?i=nextjs"
+              alt="Next.js"
+              title="Next.js"
+              className="w-20 h-20 hover:scale-110 transition-transform duration-300"
+            />
+
+            <img
+              src="https://skillicons.dev/icons?i=nodejs"
+              alt="Node.js"
+              title="Node.js"
+              className="w-20 h-20 hover:scale-110 transition-transform duration-300"
+            />
+
+            <img
+              src="https://skillicons.dev/icons?i=express"
+              alt="Express.js"
+              title="Express.js"
+              className="w-20 h-20 hover:scale-110 transition-transform duration-300"
+            />
+
+            <img
+              src="https://skillicons.dev/icons?i=mongodb"
+              alt="MongoDB"
+              title="MongoDB"
+              className="w-20 h-20 hover:scale-110 transition-transform duration-300"
+            />
+
+            <img
+              src="https://skillicons.dev/icons?i=tailwind"
+              alt="Tailwind CSS"
+              title="Tailwind CSS"
+              className="w-20 h-20 hover:scale-110 transition-transform duration-300"
+            />
+
+            <img
+              src="https://skillicons.dev/icons?i=git"
+              alt="Git"
+              title="Git"
+              className="w-20 h-20 hover:scale-110 transition-transform duration-300"
+            />
+
+            <img
+              src="https://skillicons.dev/icons?i=firebase"
+              alt="Firebase"
+              title="Firebase"
+              className="w-20 h-20 hover:scale-110 transition-transform duration-300"
+            />
+          </div>
+        </ItemLayout>
+
+        {/* GitHub Streak */}
+        <ItemLayout className="col-span-full md:col-span-6 !p-0">
+          <img
+            className="w-full h-auto"
+            src="https://github-readme-streak-stats.herokuapp.com?user=Mokim2005&theme=dark&hide_border=true"
+            alt="GitHub Streak"
+            loading="lazy"
+          />
+        </ItemLayout>
+        {/* Strengths */}
+        <ItemLayout className="col-span-full md:col-span-6">
+          <div className="flex flex-col gap-2">
+            <h3 className="text-lg font-semibold">Strengths</h3>
+            <ul className="list-disc list-inside text-sm opacity-80">
+              <li>Clean and responsive UI design</li>
+              <li>Role-based authentication systems</li>
+              <li>Full stack project structure</li>
+              <li>Problem solving mindset</li>
+            </ul>
+          </div>
+        </ItemLayout>
+
+        {/* Goal */}
+        <ItemLayout className="col-span-full md:col-span-6">
+          <div className="flex flex-col gap-2">
+            <h3 className="text-lg font-semibold">Current Focus</h3>
+            <p className="text-sm opacity-80">
+              Improving advanced backend development, building scalable
+              projects, and preparing for professional job opportunities.
+            </p>
+          </div>
         </ItemLayout>
       </div>
     </section>
