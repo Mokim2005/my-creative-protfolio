@@ -20,16 +20,14 @@ export default function Contact() {
 
       <article className="relative w-full flex flex-col items-center justify-center py-8 space-y-10">
         {/* 🔹 PROFILE IMAGE (TOP) */}
-        <div className="backdrop-blur-lg bg-white/10 border border-white/20 p-2 rounded-full shadow-xl">
+        <div className="mb-4 relative w-[130px] h-[130px] backdrop-blur-lg bg-white/10 border border-white/20 p-2 rounded-full shadow-xl overflow-hidden">
           <Image
-            src="/profile2.png"
-            alt="Profile"
-            width={100}
-            height={100}
-            className="rounded-full object-cover"
+            src="/profile2.jpg"
+            alt="Profile Image"
+            fill
+            className="object-cover rounded-full"
           />
         </div>
-
         <div className="flex flex-col items-center justify-center space-y-6 w-full sm:w-3/4">
           {/* 🔹 TITLE WITH ICON */}
           <div className="flex items-center gap-3">

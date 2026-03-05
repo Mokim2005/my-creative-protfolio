@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import gsap from "gsap";
-import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { FiInfo, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 
 export default function Form() {
   const formRef = useRef(null);
@@ -20,7 +20,7 @@ export default function Form() {
     gsap.fromTo(
       formRef.current,
       { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1 }
+      { opacity: 1, y: 0, duration: 1 },
     );
   }, []);
 
@@ -50,7 +50,7 @@ export default function Form() {
         },
         {
           publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
-        }
+        },
       );
 
       Swal.fire({
@@ -78,44 +78,44 @@ export default function Form() {
   return (
     <section className="w-full py-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-
         {/* LEFT SIDE */}
-        <div className="backdrop-blur-lg bg-white/10 border border-white/20 p-6 rounded-2xl shadow-xl space-y-6 text-white">
-          <h2 className="text-2xl font-semibold">Contact Information</h2>
+        <div
+          className="backdrop-blur-lg bg-white/10 border border-white/20 p-6 rounded-2xl 
+shadow-xl hover:shadow-[0_0_25px_rgba(250,204,21,0.4)] 
+transition duration-300 space-y-6 text-white"
+        >
+          <div className="flex items-center gap-3">
+            <FiInfo className="text-yellow-400 text-xl" />
+            <h2 className="text-2xl font-semibold">Contact Information</h2>
+          </div>
 
           <div className="space-y-4 text-sm md:text-base">
-
             <div className="flex items-center gap-3">
               <FiMail className="text-indigo-400 text-lg" />
-              <span className="text-gray-200">
-                mamokim2005@gmail.com
-              </span>
+              <span className="text-gray-200">mamokim2005@gmail.com</span>
             </div>
 
             <div className="flex items-center gap-3">
               <FiPhone className="text-indigo-400 text-lg" />
-              <span className="text-gray-200">
-                +8801729434323
-              </span>
+              <span className="text-gray-200">+8801729434323</span>
             </div>
 
             <div className="flex items-center gap-3">
               <FiMapPin className="text-indigo-400 text-lg" />
-              <span className="text-gray-200">
-                Dinajpur, Bangladesh
-              </span>
+              <span className="text-gray-200">Dinajpur, Bangladesh</span>
             </div>
-
           </div>
         </div>
 
         {/* RIGHT SIDE FORM */}
+
         <form
           ref={formRef}
           onSubmit={handleSubmit(onSubmit)}
-          className="backdrop-blur-lg bg-white/10 border border-white/20 p-6 rounded-2xl shadow-xl space-y-4"
+          className="backdrop-blur-lg bg-white/10 border border-white/20 p-6 rounded-2xl 
+shadow-xl hover:shadow-[0_0_25px_rgba(250,204,21,0.4)] 
+transition duration-300 space-y-4"
         >
-
           <input
             type="text"
             placeholder="Your Name"
@@ -152,9 +152,7 @@ export default function Form() {
           >
             Send Message
           </button>
-
         </form>
-
       </div>
     </section>
   );

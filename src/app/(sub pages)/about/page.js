@@ -38,14 +38,14 @@ export default function Home() {
       {/* HERO SECTION */}
       <div className="relative w-full h-screen flex flex-col items-center justify-center text-center">
         {/* Profile Image */}
-<div className="mb-4 relative w-[130px] h-[130px] backdrop-blur-lg bg-white/10 border border-white/20 p-2 rounded-full shadow-xl overflow-hidden">
-  <Image
-    src="/profile2.jpg"
-    alt="Profile Image"
-    fill
-    className="object-cover rounded-full"
-  />
-</div>
+        <div className="mb-4 relative w-[130px] h-[130px] backdrop-blur-lg bg-white/10 border border-white/20 p-2 rounded-full shadow-xl overflow-hidden">
+          <Image
+            src="/profile2.jpg"
+            alt="Profile Image"
+            fill
+            className="object-cover rounded-full"
+          />
+        </div>
 
         {/* Name */}
         <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl text-accent">
